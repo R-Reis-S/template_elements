@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: darkgray;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    padding: 0 1rem;
+    border-radius: 10px 10px 0px 0px;
+    background-color: whitesmoke;
+}
+
+.group_buttons {
+    position: relative;
+    height: 105px;
+}
+
+.group_buttons button {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    opacity: 40%;
+}
+
+.group_buttons button:hover {
+    transition: opacity 1s, background-color 1s;
+    opacity: 100%;
+    background-color: rgba(79,23,182, 0.33)
+}
+
+.group_buttons svg {
+    width: 30px;
+    height: 30px;
+    color: #000;
+}
+
+.group_buttons button svg:hover {
+    opacity: 100%;
+}
+
+.fly:focus ~ .underline {
+    transform: translateX(0);
+}
+
+.gps:focus ~ .underline {
+    transform: translateX(100%);
+}
+
+.trip:focus ~ .underline {
+    transform: translateX(204%);
+}
+
+.underline {
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: #31126A;
+    transition: all 500ms ease-in-out;
+}

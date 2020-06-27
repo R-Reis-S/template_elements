@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.triangle {
+    stroke-dasharray: 17;
+    animation: dash 5.5s linear infinite;
+}
+
+.triangle2 {
+    stroke-dasharray: 17;
+    animation: dashInverse 3.5s linear infinite;
+}
+
+.loading {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 7px;
+    animation: blink 3s linear infinite;
+}
+
+.loadingLine {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 22px;
+    animation: blink 3s linear infinite;
+}
+
+.liney,
+.linex {
+    transform-origin: 100px 50px;
+}
+
+.liney {
+    animation: blinkRotatey 5s linear infinite;
+}
+
+.linex {
+    animation: blinkRotatex 5s linear infinite;
+}
+
+.circle {
+    stroke-dasharray: 20;
+    animation: circleRotate 5s linear infinite;
+}
+
+.circle2 {
+    transform-origin: 100px 50px;
+    stroke-dasharray: 20;
+    animation: circleRotate2 5s linear infinite;
+}
+
+.circle3 {
+    stroke-dasharray: 20;
+    animation: circleRotate3 5s linear infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 136;
+    }
+}
+
+@keyframes dashInverse {
+    to {
+        stroke-dashoffset: -136;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 10%;
+    }
+}
+
+@keyframes blinkRotatey {
+    0%,
+    50% {
+        opacity: 100%;
+    }
+    51%,
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes blinkRotatex {
+    0%,
+    50% {
+        opacity: 0%;
+    }
+    51%,
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes circleRotate {
+    to {
+        stroke-dasharray: 250;
+    }
+}
+
+@keyframes circleRotate2 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circleRotate3 {
+    to {
+        stroke-dashoffset: 136;
+    }
+}
